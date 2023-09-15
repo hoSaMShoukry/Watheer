@@ -67,3 +67,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 # test
 # hospitalExp
 # hospital
+# hospital.io
