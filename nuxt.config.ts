@@ -2,7 +2,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css:['vuetify/styles/main.sass' , '@mdi/font/css/materialdesignicons.css','~/assets/css/tailwind.css'],
-  
+  routeRules:{
+    '/examples/*': { redirect: '/redirect-route' },
+    '/modify-headers-route': { headers: { 'x-magic-of': 'nuxt and vercel' } },
+    '/spa': { ssr: false },
+  },
+  nitro:{
+preset:'vercel-edge'
+  },
   build:{
     transpile:['vuetify','vue-countup-v3'],
   },
