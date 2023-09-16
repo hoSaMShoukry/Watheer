@@ -68,3 +68,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 # hospitalExp
 # hospital
 # hospital.io
+# nuxt-app
