@@ -68,6 +68,7 @@ export default{
 
 <style lang="scss" scoped>
 .navigation{
+  width: 100vw;
  .parent-header{
   background-image: url(https://e0.pxfuel.com/wallpapers/815/325/desktop-wallpaper-background-for-hospital-website-tip.jpg);
   display: flex;
