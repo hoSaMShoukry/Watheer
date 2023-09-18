@@ -25,8 +25,8 @@
  image-rendering: -o-crisp-edges;            /* Opera */
  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
-    background-image: url(https://img.freepik.com/free-vector/medical-background-with-abstract-virus-cells-global-pandemic_1048-12124.jpg);
-    background-attachment:fixed;
+background: whitesmoke;
+ background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
   transition: 0.5s;
