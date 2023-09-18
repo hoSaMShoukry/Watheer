@@ -1,17 +1,20 @@
 <template>
     <div class="w-100 corona-group text-center mt-3 mb-10" id="corona">
         <span class="d-inline-block pt-5 text-h4 font-weight-bold text-error" v-motion-pop-visible style="transition: 0.7s;">إحصائيات فيروس كورونا لعام 2023</span>
-        <v-row justify="center" class="mt-10">
-                <v-col lg="4" xl="6" md="12" sm="12" cols="12" class="ml-1 px-10">
+        <v-container>
+          <v-row justify="center" class="mt-10">
+                <v-col lg="4" xl="6" md="12" sm="12" cols="12">
         <Corona2/>
     </v-col>
     <div class="spacer px-20"></div>
-    <v-col lg="5" xl="5" md="12" sm="12" cols="12" class="ml-1 px-10">
+    <v-col lg="5" xl="5" md="12" sm="12" cols="12">
         <Corona1/>
     </v-col>
           
     
    </v-row>
+        </v-container>
+       
     </div>
    
 </template>

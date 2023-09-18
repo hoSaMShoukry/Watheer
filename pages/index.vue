@@ -1,32 +1,24 @@
 <template>
-    <div class="index">
-         <navigation/>
-         <mymain/>
-    </div>
-    <div>
-        <coronagroup/>
-    </div>
-    <div>
-        <departs/>
-    </div>
-    <div>
-    <who-us/>
-    </div>
-    <div>
-        <callus/>
-    </div>
+   <navigation/>
+   <mymain/>
+   <coronagroup/>
+   <departs/>
+   <who-us/>
+   <callus/>
 </template>
-<script >
 
+<script>
+export default {
+    setup () {
+        
 
-
-export default{
-   
+        return {}
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-html {
+html{
   scroll-behavior: smooth;
 }
 </style>
