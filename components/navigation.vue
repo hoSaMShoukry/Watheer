@@ -2,7 +2,7 @@
 <div class="navigation">
 
 <v-layout>
-  <v-app-bar height="70" style="background-color: transparent;">
+  <v-app-bar flat="" height="70" style="background-color: transparent;">
     <div class="parent-header w-100 h-100">
     <div class="skew-header">
       <v-app-bar-nav-icon @click="drawer = !drawer" color="white" width="large" :class="x.matches ? 'd-inline-block' : 'd-none'"  style="position: absolute;right: 0;"></v-app-bar-nav-icon>

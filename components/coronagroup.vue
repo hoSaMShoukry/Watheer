@@ -25,7 +25,7 @@
  image-rendering: -o-crisp-edges;            /* Opera */
  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
  -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
-    background-image: url(https://www.lung.org/getmedia/734b6b16-c411-4c9a-b9b9-da25f7b9848e/covidblue_e.jpg?width=700&height=350&ext=.jpg);
+    background-image: url(https://img.freepik.com/free-vector/medical-background-with-abstract-virus-cells-global-pandemic_1048-12124.jpg);
     background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%; 
