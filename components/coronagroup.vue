@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 corona-group text-center mt-3 mb-10" id="corona">
+    <div class="w-100 pt-16 corona-group text-center mt-3 mb-10" id="corona">
         <span class="d-inline-block pt-5 text-h4 font-weight-bold text-error" v-motion-pop-visible style="transition: 0.7s;">إحصائيات فيروس كورونا لعام 2023</span>
         <v-container>
           <v-row justify="center" class="mt-10">

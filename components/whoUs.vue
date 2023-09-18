@@ -1,5 +1,5 @@
 <template>
-<div v-motion-roll-visible-top style="transition: 1.2s;" class="text-center mt-10 mb-10">
+<div v-motion-roll-visible-top style="transition: 1.2s;" class="text-center pt-5 mb-10">
   <span class="text-h2 font-weight-bold text-red" id="whous">
     من نحن ؟ 
   </span>

@@ -1,5 +1,5 @@
 <template>
-  <div id="deparments" class="text-h1 font-bold text-center mb-2 mt-2 text-primary" style="text-shadow: 4px 4px inset rgb(5, 25, 97);transition: 0.7s;">
+  <div id="deparments" class="pt-20 text-h1 font-bold text-center mb-2 mt-2 text-primary" style="text-shadow: 4px 4px inset rgb(5, 25, 97);transition: 0.7s;">
     <span style="transition: 0.7s;" class="d-inline-block" v-motion-roll-visible-bottom>الأقسام</span></div>
     <div>
 
