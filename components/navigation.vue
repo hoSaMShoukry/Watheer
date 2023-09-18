@@ -58,7 +58,7 @@
                 </v-btn>
             </v-list-item>
             <v-list-item value="corona" class="mt-5">
-                <v-btn href="#corona" class="font-weight-bold ml-4 text-h6" color="red-darken-4" variant="flat" width="180" style="border-radius: 20px;">
+                <v-btn href="#corona" class="font-weight-bold ml-4 text-h6" color="red-darken-4" variant="flat" width="190" style="border-radius: 20px;">
                     <a href="#corona" class="mr-2">احصائيات كورونا </a>
                     <v-icon>mdi-virus</v-icon>
                 </v-btn>
