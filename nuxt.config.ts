@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     transpile:['vuetify','vue-countup-v3'],
   },
   devtools: { enabled: true },
+  nitro:{
+    preset:'vercel-edge'
+  },
   
   modules:['@vueuse/motion/nuxt','@morev/vue-transitions/nuxt','@nuxtjs/tailwindcss','@nuxtjs/color-mode' , 'nuxt-swiper'],
   colorMode: {
