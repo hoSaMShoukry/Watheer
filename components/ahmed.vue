@@ -121,7 +121,7 @@ span{
     justify-content: center;
     position: relative;
     align-items: flex-end;
-    background: url(~/assets/img/ahmed2.jpg);
+    background: url(assets/img/ahmed2.jpg);
     width: 110%;
     height: 130%;
     position: relative;
