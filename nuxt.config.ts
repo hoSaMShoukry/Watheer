@@ -29,10 +29,10 @@ preset:'vercel-edge'
       },
   app:{
     head:{
-        title:'salama hospital',
+        title:'watheer',
         
       meta:[
-        {name:'description' , content:'every thing about nuxt 3'}
+        {name:'watheer' , content:'watheer for best combounds'}
       ],
       link:[ 
         {rel:'stylesheet' ,
