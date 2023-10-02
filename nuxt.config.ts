@@ -6,8 +6,13 @@ export default defineNuxtConfig({
     transpile:['vuetify','vue-countup-v3'],
   },
   devtools: { enabled: true },
+  routeRules:{
+    '/examples/*': { redirect: '/redirect-route' },
+    '/modify-headers-route': { headers: { 'x-magic-of': 'nuxt and vercel' } },
+    '/spa': { ssr: false },
+  },
   nitro:{
-    preset:'vercel-edge'
+preset:'vercel-edge'
   },
   
   modules:['@vueuse/motion/nuxt','@morev/vue-transitions/nuxt','@nuxtjs/tailwindcss','@nuxtjs/color-mode' , 'nuxt-swiper'],

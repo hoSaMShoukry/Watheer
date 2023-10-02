@@ -86,7 +86,7 @@ body {
     width: 100%;
     max-width: 100% !important;
     overflow-x: hidden !important;
-height: 100vh;
+    height: fit-content;
 .success-partenrs{
     background-color: #0654DC;
     height: fit-content;
