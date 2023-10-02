@@ -109,10 +109,10 @@
     <v-row class="px-20 mt-n7 pb-5">
         <v-col xl="6" lg="6" md="6" sm="6" cols="12">
          <div :class="z.matches ? 'd-flex justify-center' : 'd-flex justify-start'">
-            <v-icon color="white">mdi-instagram</v-icon>
-            <v-icon color="white" class="ml-5">mdi-snapchat</v-icon>
-            <v-icon color="white" class="ml-5">mdi-facebook</v-icon>
-            <v-icon color="white" class="ml-5">mdi-twitter</v-icon>
+            <v-icon style="cursor: pointer;" color="white">mdi-instagram</v-icon>
+            <v-icon style="cursor: pointer;" color="white" class="ml-5">mdi-snapchat</v-icon>
+            <v-icon style="cursor: pointer;" color="white" class="ml-5">mdi-facebook</v-icon>
+            <v-icon style="cursor: pointer;" color="white" class="ml-5">mdi-twitter</v-icon>
          </div>
         </v-col>
         <v-col xl="6" lg="6" md="6" sm="6" cols="12">

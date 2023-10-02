@@ -170,6 +170,8 @@ font-weight: 700;
 /************************ */
 @media (max-width:650px) {
 .about-atheer{
+  height: fit-content !important;
+  overflow-y: hidden !important;
   .atheer-img{
     width: 100%;
     background-size: 90% 100% !important;
@@ -191,6 +193,18 @@ right: 20px;
 padding-bottom: 200px;   
   }
 }
+  
+}
+@media (max-width:450px) {
+  .about-atheer{
+    padding-bottom: 40px !important;
+  }
+  
+}
+@media (max-width:290px) {
+  .about-atheer{
+    padding-bottom: 50px !important;
+  }
   
 }
 </style>

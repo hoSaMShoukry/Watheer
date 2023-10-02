@@ -1,6 +1,5 @@
 <template>
     <div class="footer">
-
 <div class="debendent">
     <!--svg-->
     <div class="svg">
@@ -52,12 +51,14 @@ body{
     overflow-x: hidden;
     height: fit-content;
     .debendent{
-        height: 30vh;
+        height: 35vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         background-color: #DBF2FF;
+        padding-top: 15px;
+        padding-bottom: 10px;
         .svg{
             width: 100%;
             text-align: center;

@@ -66,11 +66,10 @@ body {
 }
 .ahmed{
     display: flex;
-    align-items: center;
-    
+   // align-items: center;
     max-width: 100% !important;
-overflow-x: hidden !important;
-height:100vh ;
+    overflow-x: hidden !important;
+    height:100vh ;
     .header-text , .body-text , .footer-text{
     @include fonts();
 }

@@ -86,12 +86,12 @@ body {
     width: 100%;
     max-width: 100% !important;
     overflow-x: hidden !important;
-    height: fit-content;
+    height: fit-content;    
 .success-partenrs{
     background-color: #0654DC;
     height: fit-content;
     .success-partenrs-header{
-    
+    padding-top: 10px;
     span{
 @include fonts();
     padding-top: 20px;

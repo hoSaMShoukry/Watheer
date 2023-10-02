@@ -208,4 +208,17 @@ img{
         }
     }
 }
+@media (max-width:1080px) {
+    .management{
+        .management-header{
+            .management-description{
+                span{
+                    width: 90%;
+
+                }
+            }
+        }
+    }
+    
+}
 </style>
