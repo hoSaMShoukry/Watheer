@@ -28,6 +28,10 @@
     <div class="contact-info">
      <span class="span1">
         معلومات التواصل
+        <svg width="258" class="mt-2" height="1" viewBox="0 0 258 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <line x1="258" y1="0.5" x2="-4.37114e-08" y2="0.499977" stroke="#1E95D3"/>
+       </svg>
+
      </span>
      <span class="span2">
         <svg class="ml-2 d-inline-block" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,8 +48,39 @@
         966528796543+
      </span>
     </div>
-    <div class="nav-1"></div>
-    <div class="nav-2"></div>
+    <div class="nav-1">
+        <span class="nav1-span1">
+            الشروط والأحكام
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+        <span class="nav1-span2">
+            سياسة الخصوصية
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+        <span class="nav1-span3">
+            تواصل معنا
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+    </div>
+<!--nav 2 -->
+    <div class="nav-2">
+        <span class="nav2-span1">
+            الرئيسية
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+        <span class="nav2-span2">
+            عن وثير
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+        <span class="nav2-span3">
+            قطاعتنا
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+        <span class="nav2-span3">
+            خدماتنا
+            <LineSvgTreeSvg class="svg"/>
+        </span>
+    </div>
     <div class="logo"></div>
 </div>
 
@@ -115,9 +150,10 @@ body{
         .elements{
             display: flex;
             justify-content: space-between;
-            padding: 20px 10px 15px 15px;
+            height: 100%;
+            align-items: center;
+            padding: 20px 10px 15px 50px;
             .contact-info{
-                margin-top: 7%;
                 width: 20%;
                  display:grid ;
                  grid-template-columns: 1fr;
@@ -130,6 +166,9 @@ body{
                  }
                  .span2,.span3{
                     display: flex;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    font-size: 100%;
                  }
                .span1{
                 font-weight: 700;
@@ -139,6 +178,60 @@ body{
 
 
             }
+/******nav 1 ********* */
+            .nav-1{
+                margin-bottom: 40px;
+                @include fonts();
+                color: #FFFFFF;
+                font-weight: 500;
+                font-size: 16px;
+                width:10%;
+                .nav1-span1 , .nav1-span2 , .nav1-span3{
+                  cursor: pointer;
+                    margin-right: 2px;
+                    display: flex;
+                    justify-content: flex-end;
+                    transition: 0.5s;
+                    &:hover{
+                        scale: 1.1;
+                        color: aqua;
+                    }
+                    .svg{
+                        margin-left: 10px !important;
+                        margin-top: 7px;
+                    }
+                }
+                .nav1-span2 , .nav1-span3{
+                    margin-top: 12px;
+                    text-align: right;
+                }
+
+            }
+            /******nav2*******/
+            .nav-2{
+                @include fonts();
+                color: #FFFFFF;
+                font-weight: 500;
+               span{
+                display: flex;
+                &:nth-child(2),&:nth-child(3) , &:nth-child(4){
+                    margin-top: 10px; 
+                }
+                justify-content: flex-end;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover{
+                    color: aqua;
+                    scale: 1.1;
+                }
+            .svg{
+                margin-left: 10px;
+                margin-top: 7px;
+            }
+            }
+            
+            }
+
            
         }
     }
