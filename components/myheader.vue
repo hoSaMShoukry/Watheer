@@ -2,7 +2,7 @@
     <div class="header">
 <v-layout>
     <v-app-bar class="navbar" flat="" color="#FFFFF">
-        <v-btn class="callus" color="#0654DC" variant="flat"><span class="callus-text">اتصل بنا  </span></v-btn>
+        <v-btn href="#joinus" class="callus" color="#0654DC" variant="flat"><span class="callus-text">اتصل بنا  </span></v-btn>
         <span class="search-icon"></span> 
         <v-list :class="x.matches ? 'd-none' : 'd-flex'" class="header-list">
             <v-list-item href="#main" class="header-list-items">الرئيسية</v-list-item>
