@@ -1,15 +1,15 @@
 <template>
-    <div class="ahmed">
+    <div class="ahmed" id="our-project">
                <v-container>
         <v-row justify="between">
             <v-col xl="6" lg="6" md="6" sm="6" cols="12">
                 <div class="text">
                     <div class="header-text">
-                    <span>
+                    <span v-motion-slide-visible-right style="transition: 1.1s;">
                         كلمة رئيس مجلس الإدارة
                     </span>
                 </div>
-                <div class="body-text">
+                <div class="body-text" v-motion-slide-visible-left style="transition: 1.1s;">
                     <span>
                         مرحبًا بكم في عالم وثير للعقارات، حيث تتجسد رؤيتنا وتحقق أحلامنا. نحن هنا لنشق طريقًا جديدًا في صناعة التطوير العقاري، من خلال التميز والابتكار والالتزام بالجودة. 
 في هذا الرحلة المثيرة، نحمل معنا فريقًا من الخبراء والمبدعين، الذين يمثلون عمق الخبرة والحماسة لدينا. بدعمهم وعزمهم، نطمح لبناء مشاريع لا تقل إثراءً عن قيمنا ومبادئنا. 
@@ -19,7 +19,7 @@
                     </span>
                 </div>
                 <div class="footer-text">
-                    <span>
+                    <span v-motion-slide-visible-top style="transition: 1.1s;">
                         أشكر كل من شارك في هذا الرحلة، من موظفينا وشركائنا وعملائنا. دعونا نعمل معًا نحو تحقيق النجاحات وصناعة تأثير إيجابي يمتد للأجيال القادمة.
 
                     </span>
@@ -28,7 +28,7 @@
               
             </v-col>
             <v-col xl="4" lg="4" md="5" sm="6" cols="12">
-                <div class="img">
+                <div class="img" v-motion-roll-visible-top style="transition: 1.1s;">
                     <svg class="svg" width="116" height="111" viewBox="0 0 116 111" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32.2856 110.494H45.0777C48.3845 72.9664 79.016 45.2775 116 42.1429V29.9529C72.4894 29.9529 32.2856 66.436 32.2856 110.494Z" fill="#0654DC"/>
                     <path d="M64.1354 110.495H76.8405C77.7107 90.294 94.6798 73.9244 116 72.7925V61.7344C87.9792 61.7344 63.4392 84.1989 64.1354 110.495Z" fill="#0654DC"/>
@@ -50,6 +50,9 @@
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -244,11 +247,11 @@ image-rendering: crisp-edges;
        max-width: 90vw;
     }
         .img{
-            width: 90%;
+            width: 110%;
             background-size: 70% 100%;
             background-position: center;
             height: 70vh;
-            right: 2vw;
+            right: 12vw;
             top: -10vh;    
         }
     }
@@ -263,11 +266,36 @@ image-rendering: crisp-edges;
     }
     
 }
+@media (max-width:420px) {
+    .ahmed{
+        .img{
+            right: 12vw;
+        }
+    }
+    
+}
+@media (max-width:400px) {
+    .ahmed{
+        .img{
+            right: 13vw;
+        }
+    }
+    
+}
 @media (max-width: 351px) {
     .ahmed{
         .img{
         
-            right: 14vw;
+            right: 15vw;
+        }
+    }
+    
+}
+@media (max-width: 320px) {
+    .ahmed{
+        .img{
+        
+            right: 16vw;
         }
     }
     

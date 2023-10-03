@@ -1,12 +1,14 @@
 <template>
+    <span id="advertis"></span>
     <div class="management mt-40">
      <div class="management-elements">
         <div class="management-header">
       <div class="management-seat">
-        <span>مجلس اللإدارة</span>
+        
+        <span v-motion-slide-visible-right style="transition: 1.1s;">مجلس الإدارة</span>
       </div>
       <div class="management-description">
-        <span>
+        <span v-motion-slide-visible-left style="transition: 1.1s;">
             يضمّ فريق الإدارة في وثير مجموعة متميزة من الخبراء، الذين يمثلون العامل الرئيسي وراء إنجازاتنا وتقدمنا.
 
         </span>
@@ -17,7 +19,7 @@
              <v-row class="mt-10">
                 <!--first col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
-                   <v-card class="card">
+                   <v-card class="card" v-motion-slide-visible-left style="transition: 1.1s;">
                     <img src="~/assets/img/salem.jpg" alt="">
                    </v-card>
                    <div class="card-info">
@@ -39,7 +41,7 @@
                 </v-col>
                 <!--second col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
-                    <v-card class="card">
+                    <v-card class="card" v-motion-slide-visible-right style="transition: 1.1s;">
                     <img src="~/assets/img/khaled.jpg" alt="">
                    </v-card>
                    <div class="card-info">
@@ -61,7 +63,7 @@
                 </v-col>
                 <!--third col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
-                    <v-card class="card">
+                    <v-card class="card" v-motion-slide-visible-bottom style="transition: 1.1s;">
                     <img src="~/assets/img/saeed.jpg" alt="">
                    </v-card>
                    <div class="card-info">
@@ -83,7 +85,7 @@
                 </v-col>
                 <!--fourth col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
-                    <v-card class="card">
+                    <v-card class="card" v-motion-slide-visible-top style="transition: 1.1s;">
                     <img src="~/assets/img/ahmed.jpg" alt="">
                    </v-card>
                    <div class="card-info">
@@ -123,6 +125,9 @@
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";

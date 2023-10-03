@@ -4,7 +4,7 @@
         <v-row justify="between">
             
             <v-col xl="4" lg="4" md="5" sm="6" cols="12">
-                <div class="img">
+                <div class="img" v-motion-roll-visible-left style="transition: 1.1s;">
                     <svg class="svg" width="116" height="111" viewBox="0 0 116 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M83.7145 110.494H70.9224C67.6156 72.9664 36.9841 45.2775 6.10352e-05 42.1429V29.9529C43.5107 29.9529 83.7145 66.436 83.7145 110.494Z" fill="#0654DC"/>
 <path d="M51.8647 110.495H39.1596C38.2894 90.294 21.3203 73.9244 6.10352e-05 72.7925V61.7344C28.0209 61.7344 52.5609 84.1989 51.8647 110.495Z" fill="#0654DC"/>
@@ -17,18 +17,18 @@
             <v-col xl="6" lg="6" md="6" sm="6" cols="12">
                 <div class="text">
                     <div class="header-text">
-                    <span>
+                    <span v-motion-roll-visible-bottom style="transition: 1.1s;">
                         كلمة العضو المنتدب 
                     </span>
                 </div>
-                <div class="body-text">
+                <div class="body-text" v-motion-roll-visible-top style="transition: 1.1s;">
                     <span>
                         من خلال رؤية استراتيجية وروح ريادية، يسعدني أن أرحب بكم في عالم وثير للعقارات. نحن هنا لنكون نقطة تحول في صناعة التطوير العقاري، ولنبني مجتمعات مستدامة ومبتكرة تتجاوز التوقعات.
 
                     </span>
                 </div>
                 <div class="footer-text">
-                    <span>
+                    <span v-motion-roll-visible-bottom style="transition: 1.1s;">
                         في وثير، نؤمن بقوة الابتكار والتفرد، ونسعى جاهدين لتحقيق أعلى مستويات الجودة في جميع جوانب عملنا. مع فريقنا المتميز من الخبراء والمهنيين، نعمل بتفاني وعزم لتحقيق نجاحات مستدامة وبناء علاقات تعتمد على الثقة والشفافية.
 نحن نفخر بمساهمتنا في تشكيل مستقبل المدن وتحسين جودة الحياة للأجيال الحالية والمقبلة. إن الالتزام بالاستدامة والمسؤولية الاجتماعية جزء لا يتجزأ من هويتنا، ونعمل جاهدين لتحقيق توازن بين النجاح الاقتصادي وتحقيق الفائدة الاجتماعية.
 شكرًا لكم على دعمكم وثقتكم، ومعًا سنستمر في تحقيق الإنجازات وخدمة المجتمع بأفضل طريقة ممكنة
@@ -50,6 +50,9 @@
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth !important;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -64,6 +67,7 @@
 body {
     overflow-x: hidden !important;
 }
+
 .ahmed{
     display: flex;
    // align-items: center;
@@ -198,6 +202,8 @@ image-rendering: crisp-edges;
 }
 @media (max-width:960px) {
     .ahmed{
+        height: fit-content !important;
+        overflow-y: hidden;
         .text{
             width: 90%;
         }
@@ -255,11 +261,11 @@ image-rendering: crisp-edges;
        width: 90vw !important;
     }
         .img{
-            width: 90%;
+            width: 110%;
             background-size: 70% 100%;
             background-position: center;
             height: 70vh;
-            right: 2vw;
+            right: 12vw;
             top: -10vh;    
         }
     }
@@ -274,11 +280,36 @@ image-rendering: crisp-edges;
     }
     
 }
+@media (max-width:420px) {
+    .ahmed{
+        .img{
+            right: 12vw;
+        }
+    }
+    
+}
+@media (max-width:400px) {
+    .ahmed{
+        .img{
+            right: 13vw;
+        }
+    }
+    
+}
 @media (max-width: 351px) {
     .ahmed{
         .img{
         
-            right: 14vw;
+            right: 15vw;
+        }
+    }
+    
+}
+@media (max-width: 320px) {
+    .ahmed{
+        .img{
+        
+            right: 16vw;
         }
     }
     

@@ -1,7 +1,7 @@
 <template>
-    <div class="partenrs">
+    <div class="partenrs" id="our-subs">
 <div class="success-partenrs">
-    <div class="success-partenrs-header d-block text-center">
+    <div class="success-partenrs-header d-block text-center" v-motion-fade-visible style="transition: 1.1s;">
         <span class="d-inline-block">
             شركاء النجاح
             <svg class="svg-header" width="178" height="11" viewBox="0 0 178 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,28 +13,28 @@
    
         <v-row justify="center"> 
                 <v-col xl="3" lg="2" md="2" sm="5" :cols="z.matches ? '12' : '6'"> 
-                <div class="parent-svg">
+                <div class="parent-svg" v-motion-slide-visible-bottom style="transition: 1.1s;">
                     <img src="~/assets/img/iscan.png" class="w-75 img" alt="">
                   <LineSvg :class="z.matches ? 'd-none' : ''"/>
                 </div>               
             </v-col>
             <!--second-col-->
             <v-col xl="3" lg="2" md="2" sm="5" :cols="z.matches ? '12' : '6'"> 
-                <div class="parent-svg">
+                <div class="parent-svg" v-motion-slide-visible-top style="transition: 1.1s;">
                     <img src="~/assets/img/immar.png" :class="y.matches ? 'pl-5 w-75 img immar' : 'w-75 img immar'" alt="">
                     <LineSvg :class="x.matches ? 'd-none' : ''"/>
                 </div>               
             </v-col>
             <!--third col-->
             <v-col xl="3" lg="2" md="2" sm="5" :cols="z.matches ? '12' : '6'"> 
-                <div class="parent-svg">
+                <div class="parent-svg" v-motion-slide-visible-right style="transition: 1.1s;">
                     <img src="~/assets/img/iqarat.png" class="w-75 img" alt="">
                     <LineSvg  :class="z.matches ? 'd-none' : ''"/>
                 </div>               
             </v-col>
             <!--fourth col-->
             <v-col xl="3" lg="2" md="2" sm="5" :cols="z.matches ? '12' : '6'"> 
-                <div class="parent-svg">
+                <div class="parent-svg" v-motion-slide-visible-left style="transition: 1.1s;">
                     <img src="~/assets/img/iqarya.png" :class="y.matches ? 'pl-5 w-75 img iqarya' : 'w-75 img iqarya'">
                 </div>               
             </v-col>
@@ -67,6 +67,9 @@ import LineSvg from './lineSvg/line-svg.vue';
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -81,11 +84,11 @@ import LineSvg from './lineSvg/line-svg.vue';
 body {
     overflow-x: hidden !important;
 }
-
 .partenrs{
     width: 100%;
     max-width: 100% !important;
     overflow-x: hidden !important;
+    overflow-y: hidden;
     height: fit-content;    
 .success-partenrs{
     background-color: #0654DC;

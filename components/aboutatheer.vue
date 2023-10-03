@@ -1,8 +1,8 @@
 <template>
-  <div class="about-atheer h-screen">
+  <div class="about-atheer h-screen" id="main">
     <v-row>
     <v-col  :cols="x.matches ? '12' : '7'">
-<div class="atheer-img">
+<div class="atheer-img" v-motion-pop style="transition: 1s;">
   <svg width="25%" class="atheer-img-svg" height="126" viewBox="0 0 132 126" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M36.7387 125.735H51.2953C55.0582 83.0307 89.9147 51.5227 132 47.9558V34.0843C82.4879 34.0843 36.7387 75.5996 36.7387 125.735Z" fill="#0654DC"/>
 <path d="M72.9816 125.735H87.4391C88.4294 102.748 107.739 84.1208 132 82.8327V70.2493C100.114 70.2493 72.1894 95.8124 72.9816 125.735Z" fill="#0654DC"/>
@@ -12,7 +12,7 @@
 </div>
     </v-col>
     <v-col :cols="x.matches ? '12' : '4'">
-        <div class="mt-60 w-100 d-block about-atheer-text" style="position: relative;">
+        <div class="mt-60 w-100 d-block about-atheer-text" style="position: relative;transition: 1s;" v-motion-slide-right >
            <div class="about-atheer-text1">
             <span class="main">   الرئيسية /  </span>
              &nbsp;
@@ -62,6 +62,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -73,10 +76,16 @@ export default {
     url("https://db.onlinewebfonts.com/t/fd33d5c7a5d5f34c2a7e0fec0af20b8d.svg#PNU Medium")format("svg");
     
 }
+
 body {
     overflow-x: hidden !important;
 }
 .about-atheer{
+  .first-svg{
+    position: absolute;
+    background-color: red;
+    right: 0;
+}
 max-width: 100% !important;
 overflow-x: hidden !important;
   .atheer-img{

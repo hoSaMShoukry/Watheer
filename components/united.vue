@@ -1,13 +1,13 @@
 <template>
     <div class="united">
         <div class="content">
-            <div class="left-side">
+            <div class="left-side" v-motion-slide-visible-left style="transition: 1.1s;">
                 <span class="left-side-text">
                     تكمن قوة التحالفات في توحيد الجهود والخبرات لتحقيق أهداف مشتركة. وفي هذا الإطار، نحرص في وثير للعقارات على بناء شراكات استراتيجية مع جهات متميزة لتعزيز توجهاتنا وتحقيق تطلعاتنا. تلك التحالفات تسهم في تعزيز مدى تأثيرنا وتوسيع نطاق عملنا.
 
                 </span>
             </div>
-            <div class="right-side">
+            <div class="right-side" v-motion-slide-visible-right style="transition: 1.1s;">
                 <span class="right-side-text">
                     التحالفات
                 </span>
@@ -19,28 +19,28 @@
         <v-container>
             <v-row class="mt-10" style="height: fit-content;">
                 <!-- col1 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-left style="transition: 1.1s;">
                 <img src="~/assets/img/naga.jpg" class="w-100" alt="">
             </v-col>
                 <!-- col1 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-right style="transition: 1.1s;">
               <img src="~/assets/img/asayl.png"  class="w-100"  alt="">
             </v-col>
             <!-- col2 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-top style="transition: 1.1s;">
                 <img src="~/assets/img/roshen.png" class="w-100"  alt="">
             </v-col>
             <!-- col3 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-bottom style="transition: 1.1s;">
                 <img src="~/assets/img/wafy.png" class="w-100" alt="">
             </v-col>
             <!-- col4 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-left style="transition: 1.1s;">
                 <img src="~/assets/img/sheaon.png" class="w-100" alt="">
 
             </v-col>
             <!-- col5 -->
-            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6">
+            <v-col class="d-flex" xl="2" lg="2" md="4" sm="6" cols="6" v-motion-slide-visible-left style="transition: 1.1s;">
                 <img src="~/assets/img/watana.png" class="w-100" alt="">
 
             </v-col>
@@ -62,6 +62,9 @@
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -76,6 +79,7 @@
 body {
     overflow-x: hidden !important;
 }
+
 .united{
     overflow-x: hidden !important;
     overflow-y: hidden !important;

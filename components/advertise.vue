@@ -4,12 +4,12 @@
     <v-row>
         <!--start vision col-->
         <v-col xl="6" lg="6" md="6" sm="6" cols="12" >
-            <v-card variant="flat" class="card">
+            <v-card variant="flat" class="card" v-motion-roll-visible-top style="transition: 1.2s;">
                 <div class="main-card">
                     <!--card head-->
                 <div class="card-head">
                      <!--vison text-->
-                     <span class="vision-text d-inline-block">
+                     <span class="vision-text d-inline-block" id="about">
                         الرؤية
                     </span>
                   <!--vison text-->
@@ -44,7 +44,7 @@
         <!--start about col-->
         
             <v-col xl="6" lg="6" md="6" sm="6" cols="12" >
-            <v-card variant="flat" class="card">
+            <v-card variant="flat" class="card" v-motion-roll-visible-right style="transition: 1.2s;">
                 <div class="main-card">
                     <!--card head-->
                 <div class="card-head">
@@ -82,7 +82,7 @@
         <!--end about col-->
         <!--start bahavior col-->
         <v-col xl="6" lg="6" md="6" sm="6" cols="12" >
-            <v-card variant="flat"  class="card">
+            <v-card variant="flat"  class="card" v-motion-roll-visible-left style="transition: 1.2s;">
                 <div class="main-card">
                     <!--card head-->
                 <div class="card-head">
@@ -121,7 +121,7 @@
         <!--end bahavior col-->
         <!--start goals col-->
         <v-col xl="6" lg="6" md="6" sm="6" cols="12" >
-            <v-card variant="flat" class="card">
+            <v-card variant="flat" class="card" v-motion-roll-visible-bottom style="transition: 1.2s;">
                 <div class="main-card">
                     <!--card head-->
                 <div class="card-head">
@@ -187,6 +187,9 @@
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
@@ -201,9 +204,11 @@
 body {
     overflow-x: hidden !important;
 }
+
 .advertis{
     max-width: 100% !important;
-overflow-x: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
     .card{
         width: 100%;
         height: 323px;

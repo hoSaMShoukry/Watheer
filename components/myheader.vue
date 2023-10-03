@@ -5,13 +5,13 @@
         <v-btn class="callus" color="#0654DC" variant="flat"><span class="callus-text">اتصل بنا  </span></v-btn>
         <span class="search-icon"></span> 
         <v-list :class="x.matches ? 'd-none' : 'd-flex'" class="header-list">
-            <v-list-item class="header-list-items">الرئيسية</v-list-item>
-            <v-list-item class="header-list-items">عن وثير</v-list-item>
-            <v-list-item class="header-list-items">المركز الاعلامى</v-list-item>
-            <v-list-item class="header-list-items">مشاريعنا</v-list-item>
-            <v-list-item class="header-list-items">قطاعتنا</v-list-item>
-            <v-list-item class="header-list-items">خدماتنا</v-list-item>
-            <v-list-item class="header-list-items">انضم الينا</v-list-item>
+            <v-list-item href="#main" class="header-list-items">الرئيسية</v-list-item>
+            <v-list-item href="#about" class="header-list-items">عن وثير</v-list-item>
+            <v-list-item href="#advertis" class="header-list-items">المركز الاعلامى</v-list-item>
+            <v-list-item href="#our-project" class="header-list-items">مشاريعنا</v-list-item>
+            <v-list-item href="#our-subs" class="header-list-items">قطاعتنا</v-list-item>
+            <v-list-item href="#services" class="header-list-items">خدماتنا</v-list-item>
+            <v-list-item href="#joinus" class="header-list-items">انضم الينا</v-list-item>
             
         </v-list> 
         <div :class="x.matches ? 'd-none' : 'd-flex'" class="img">
@@ -45,13 +45,13 @@
     وثير للتطوير العقارى
 </span>
         </div>  
-        <v-list-item class="drawer-list">الرئيسية</v-list-item>
-        <v-list-item class="drawer-list">عن وثير</v-list-item>
-        <v-list-item class="drawer-list">المركز الاعلامى</v-list-item>
-        <v-list-item class="drawer-list">مشاريعنا</v-list-item>
-        <v-list-item class="drawer-list">قطاعتنا</v-list-item>
-        <v-list-item class="drawer-list">خدماتنا</v-list-item>
-        <v-list-item class="drawer-list">انضم الينا</v-list-item>
+        <v-list-item href="#main" class="drawer-list">الرئيسية</v-list-item>
+        <v-list-item href="#about" class="drawer-list">عن وثير</v-list-item>
+        <v-list-item href="#advertis" class="drawer-list">المركز الاعلامى</v-list-item>
+        <v-list-item href="#our-project" class="drawer-list">مشاريعنا</v-list-item>
+        <v-list-item href="#our-subs" class="drawer-list">قطاعتنا</v-list-item>
+        <v-list-item href="#services" class="drawer-list">خدماتنا</v-list-item>
+        <v-list-item href="#joinus" class="drawer-list">انضم الينا</v-list-item>
     </v-list>
     </v-navigation-drawer>
 </v-layout>
@@ -71,6 +71,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+html{
+  scroll-behavior: smooth;
+}
 @import url(https://db.onlinewebfonts.com/c/fd33d5c7a5d5f34c2a7e0fec0af20b8d?family=PNU+Medium);
 @mixin fonts(){
     font-family: "PNU Medium";
