@@ -177,8 +177,8 @@ image-rendering: crisp-edges;
     .ahmed{
         .img{
             margin-top: 35px;
-            margin-left:60px ;
-           width: 90%;
+            margin-left:-20px !important ;
+           width: 120%;
            height: 115%;
            
 
@@ -208,31 +208,9 @@ image-rendering: crisp-edges;
             width: 90%;
         }
         .img{
-            margin-top: 35px;
-            margin-left:50px ;
-            padding-right: 50px;
-           width: 90%;
-           height: 90%;
-                
-       
-        }
-    }
-
-    .text{
-        margin-right: 600px;
-       width: 110%;
-       height: 100%;
-    margin-bottom: 85px;
-    }
-    
-}
-@media (max-width:800px) {
-    .ahmed{
-        .img{
             margin-top: 75px;
-            margin-left:50px ;
-            padding-right: 50px;
-           width: 80%;
+            margin-left:20px !important;
+           width: 90%;
            height: 80%;
                 
        
@@ -245,11 +223,50 @@ image-rendering: crisp-edges;
        height: 100%;
     margin-bottom: 85px;
     }
+    
+}
+@media (max-width:801px) {
+    .ahmed{
+        .img{
+            margin-top: 75px;
+            margin-left:50px ;
+            padding-right: 50px;
+           width: 95% !important;
+           height: 75%;
+                
+       
+        }
+    }
+
+    .text{
+        margin-right: 600px;
+       width: 110%;
+       height: 100%;
+    margin-bottom: 85px;
+    }
 
 }
-@media (max-width: 650px) {
+
+@media (max-width:730px) {
+    .ahmed{
+        .img{
+            margin: 100px;
+            width: 100% !important;
+            height: 70% !important;
+            right: 15px;
+        }
+    }
+    
+}
+
+
+@media (max-width: 660px) {
     .ahmed{
         height: fit-content;
+        .img{
+            height: 60% !important;
+            margin-top: 150px;
+        }
     }
     
 }
@@ -261,21 +278,31 @@ image-rendering: crisp-edges;
        width: 90vw !important;
     }
         .img{
-            width: 110%;
-            background-size: 70% 100%;
+            width: 80% !important;
+            background-size: 100% 100%;
             background-position: center;
-            height: 70vh;
-            right: 12vw;
+            height: 70vh !important;
+            left: 3.5vw;
             top: -10vh;    
         }
     }
+}
+@media (max-width:500px) {
+    .ahmed{
+        .img{
+            width: 80% !important;
+             right: 1vw !important;
+        }
+    }
+    
 }
 @media (max-width: 451px) {
     .ahmed{
         .img{
             width: 100%;
+            height: 60vh !important;
+            left: 4vw !important;
             background-size: 100% 100%;
-            right: 11vw;
         }
     }
     
@@ -296,10 +323,20 @@ image-rendering: crisp-edges;
     }
     
 }
+@media (max-width:361px) {
+    .ahmed{
+        .img{
+            width: 80vw !important;
+            height: 50vh !important;
+        left:1vw !important;
+        }
+    }
+    
+}
 @media (max-width: 351px) {
     .ahmed{
         .img{
-        
+            height: 50vh !important;
             right: 15vw;
         }
     }
@@ -317,8 +354,9 @@ image-rendering: crisp-edges;
 @media (max-width: 301px) {
     .ahmed{
         .img{
-        
-            right: 16vw;
+            width: 82vw !important;
+            height: 48vh !important;
+            left: 1vw !important;
         }
     }
     

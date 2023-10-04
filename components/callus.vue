@@ -2,7 +2,7 @@
     <div class="call-us">
 <!--contact and nav part-->
 <div class="contact d-flex align-center">
-<v-row :justify="y.matches ? 'center' : 'between'" :class="x.matches ? 'row pt-20 pb-20 px-20':'px-20 row'">
+<v-row class="contact-child" :justify="y.matches ? 'center' : 'between'" :class="x.matches ? 'row pt-20 pb-20 px-20':'px-20 row'">
 <v-col xl="4" lg="4" md="4" :sm="y.matches ? '12' : '6'" :class="y.matches ? 'd-flex justify-center' : ''" v-motion-roll-visible-bottom style="transition: 1.1s;">
 <div class="call-info">
 <svg class="call-info-svg" width="141" height="19" viewBox="0 0 141 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
 </div>
 </v-col>
 <!--  col2   -->
-<v-col xl="4" lg="4" md="4" :sm="y.matches ? '12' : '6'" :class="y.matches ? 'd-flex justify-center mr-1 mt-10' : ''" v-motion-slide-visible-bottom style="transition: 1.1s;">
+<v-col xl="4" lg="4" md="4" :sm="y.matches ? '12' : '6'" :class="y.matches ? 'd-flex justify-center mr-1 mb-11 mt-10' : ''" v-motion-slide-visible-bottom style="transition: 1.1s;">
     <div class="all-nav d-flex justify-between">
 <div class="nav-1" :class="y.matches ? 'mr-16' : ''">
     <div class="d-flex justify-end align-center mt-1">
@@ -73,7 +73,7 @@
 
 <!--col4-->
 
-<v-col  xl="4" lg="4" md="4" :sm="y.matches ? '6' : '12'" class="col" :class="y.matches?'d-flex justify-center mt-5':''"
+<v-col  xl="4" lg="4" md="4" :sm="y.matches ? '9' : '12'" class="col" :class="y.matches?'d-flex justify-end mt-5':''"
 v-motion-slide-visible-top style="transition: 1.1s;"
 >
 <div>
@@ -105,7 +105,7 @@ v-motion-slide-visible-top style="transition: 1.1s;"
 </v-col>
 </v-row>
 </div>
-<div class="hr d-flex justify-center">
+<div class="hr d-flex justify-center" :class="y.matches ? 'mt-n16 hr d-flex justify-center':'hr d-flex justify-center'">
     <hr>
 </div>
     <v-row class="px-20 mt-n7 pb-5">
@@ -206,6 +206,15 @@ body{
         .col{
             margin-top: 50px;
             margin-left: 5px;
+        }
+    }
+    
+}
+@media (max-width:665px) {
+    .call-us{
+        .contact-child{
+            display: flex !important;
+            flex-direction: column-reverse !important;
         }
     }
     

@@ -149,9 +149,10 @@ image-rendering: crisp-edges;
     .ahmed{
         .img{
             margin-top: 35px;
-            margin-left:60px;
-           width: 110%;
-           height: 100%;
+            margin-left:20px !important ;
+           width: 110% !important;
+           height: 115%;
+           
            
 
         }
@@ -174,18 +175,7 @@ image-rendering: crisp-edges;
     }
 
    
-}
 
-@media (max-width:1279px) {
-    .ahmed{
-        .img{
-            margin-top: 35px;
-            margin-left:60px ;
-           width: 90%;
-           height: 115%;
-           
-
-        }
     }
 
     .text{
@@ -194,18 +184,23 @@ image-rendering: crisp-edges;
        height: 100%;
        margin-top: 40px;
     }
+@media (max-width:1000px) {
+    .ahmed{
+        .img{
+            margin-left: 0px !important;
+        }
+    }
+    
 }
 
 @media (max-width:960px) {
     .ahmed{
         .img{
             margin-top: 35px;
-            margin-left:50px ;
+            margin-left:40px !important;
             padding-right: 50px;
-           width: 80%;
+           width: 90% !important;
            height: 90%;
-                
-       
         }
     }
 
@@ -217,8 +212,11 @@ image-rendering: crisp-edges;
     }
     
 }
+
 @media (max-width:800px) {
     .ahmed{
+        height: fit-content !important;
+        padding-bottom: 50px;
         .img{
             margin-top: 75px;
             margin-left:50px ;
@@ -238,7 +236,34 @@ image-rendering: crisp-edges;
     }
 
 }
+@media (max-width:750px) {
+    .ahmed{
+        .img{
 
+            width:43vw;
+            right: 1vw;
+        }
+    }
+    
+}
+@media (max-width:700px) {
+    .ahmed{
+        .img{
+            height: 65vh;
+        }
+    }
+    
+}
+@media (max-width:620px) {
+    .ahmed{
+        .img{
+            right: 15px;
+            top: 0px;
+            height: 60vh;
+        }
+    }
+    
+}
 @media (max-width:599px) {
     .ahmed{
         height: fit-content;
@@ -247,21 +272,32 @@ image-rendering: crisp-edges;
        max-width: 90vw;
     }
         .img{
-            width: 110%;
-            background-size: 70% 100%;
+            width: 80% !important;
+            background-size: 100% 100%;
             background-position: center;
             height: 70vh;
-            right: 12vw;
+            left: 3vw;
             top: -10vh;    
         }
     }
+}
+@media (max-width:500px) {
+    .ahmed{
+        .img{
+            width: 80%;
+            right: 1vw;
+        }
+    }
+    
 }
 @media (max-width: 451px) {
     .ahmed{
         .img{
             width: 100%;
+            height: 60vh !important;
+            left: 1vw !important;
             background-size: 100% 100%;
-            right: 11vw;
+
         }
     }
     
@@ -277,25 +313,27 @@ image-rendering: crisp-edges;
 @media (max-width:400px) {
     .ahmed{
         .img{
+            height: 62vh;
             right: 13vw;
         }
     }
     
 }
-@media (max-width: 351px) {
+@media (max-width: 360px) {
     .ahmed{
         .img{
-        
-            right: 15vw;
+           height: 55vh !important;
+            left: -1vw !important;
         }
     }
     
 }
-@media (max-width: 320px) {
+@media (max-width: 330px) {
     .ahmed{
         .img{
-        
-            right: 16vw;
+            width: 90% !important;
+        height: 50vh !important;
+            left: -7vw !important;
         }
     }
     
