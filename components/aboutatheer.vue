@@ -18,7 +18,7 @@
              &nbsp;
             <span class="about">عن وثير</span>
           </div>
-          <hr style="position: absolute; top: -50px; right: -20px; width: 140%;"/>            
+          <hr style="position: absolute; top: -50px; right: -20px; width: 266%;"/>            
            <div class="about-atheer-text2">
             <div class="about-atheer-text2-svg">
               <svg width="87" height="19" viewBox="0 0 87 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,6 @@ export default {
       x: window.matchMedia("(max-width: 650px)"),
     }
   }
-  
 }
 </script>
 
@@ -92,7 +91,8 @@ overflow-x: hidden !important;
   width: 47vw;
   height: 80vh;
 background: url(~/assets/img/aboutatheer.jpg);
-background-size: 100% 100%;
+background-size: 100% 81%;
+background-position: center bottom;
 background-attachment: scroll;
 background-repeat: no-repeat;
 image-rendering: crisp-edges;
@@ -171,6 +171,7 @@ font-weight: 700;
     padding-bottom: 200px;
     .atheer-img{
       width: 55vw;
+      height: 50vh;
     }
   }
   
@@ -186,25 +187,39 @@ font-weight: 700;
   }
   
 }
-/************************ */
-@media (max-width:770px) {
+@media (max-width:800px) {
   .about-atheer{
     height: fit-content !important;
     padding-bottom: 250px;
     .atheer-img{
+      top: 1vh;
       width: 55vw;
+      height: 50vh;
+      .atheer-img-svg{
+        width: 170px;
+      }
+    }
+  }
+}
+@media (max-width:750px) {
+  .about-atheer{
+    padding-bottom: 150px !important;
+    .atheer-img{
+      top: -10vh;
+      height: 55vh;
+      background-size: 100% 62%;
     }
   }
   
 }
-@media (max-width:650px) {
+@media screen and (max-width:650px) {
 .about-atheer{
   height: fit-content !important;
   overflow-y: hidden !important;
   .atheer-img{
     width: 100%;
-    background-size: 90% 100% !important;
-    background-position: center center;
+    background-size: 90% 80% !important;
+    background-position: center bottom;
     .atheer-img-svg{
       width: 100px;
 right: 10px;
@@ -224,64 +239,64 @@ padding-bottom: 200px;
 }
   
 }
-@media (max-width:450px) {
-  .about-atheer{
-    padding-bottom: 40px !important;
-  }
-  
-}
-@media (max-width:290px) {
-  .about-atheer{
-    padding-bottom: 50px !important;
-  } 
-}
-@media (min-height:532px){
-.about-atheer{
-  .atheer-img{
-   height: 80vh !important;
-  }
-}
-}
 
-@media (min-height:640px) {
+@media screen and (max-width:600px) {
   .about-atheer{
     .atheer-img{
-      height: 70vh !important;
+      top: 10px;
       
     }
   }
   
 }
-@media (min-height:740px) {
+
+
+@media (max-width:500px) {
+  .about-atheer{
+    padding-bottom: 40px !important;
+    .atheer-img{
+    top: 30px;
+   height: 60vh;
+  }
+  }
+  
+}
+
+@media (max-width:290px) {
+  .about-atheer{
+    padding-bottom: 50px !important;
+  } 
+}
+
+/******************** */
+@media (max-height:600px) {
   .about-atheer{
     .atheer-img{
-      height: 62vh !important;
+      height: 95vh;
     }
   }
   
 }
-@media (min-height:853px) {
+@media (max-height:550px) {
   .about-atheer{
     .atheer-img{
-      height: 60vh !important;
+      top: 53px;
+      height: 60vh;
     }
-  } 
-}
-@media (min-height:866px) {
-  .about-atheer{
-    .atheer-img{
-      height: 60vh !important;
-    }
-  } 
-}
-@media (min-height:1100px) {
-  .about-atheer{
-    .atheer-img{
-      width: 54vw !important;
-    height: 53vh !important;
+    .about-atheer-text{
+      margin-top: 270px;
     }
   }
   
 }
 
+@media (max-height:360px) {
+  .about-atheer{
+    .atheer-img{
+     top: 10.5vh;
+      height: 96vh;
+    }
+  }
+  
+}
 </style>

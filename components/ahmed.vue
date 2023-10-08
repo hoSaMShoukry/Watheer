@@ -2,7 +2,7 @@
     <div class="ahmed" id="our-project">
                <v-container>
         <v-row justify="between">
-            <v-col xl="6" lg="6" md="6" sm="6" cols="12">
+            <v-col xl="6" lg="6" md="6" :sm="x.matches ? '12' : '6'" :cols="x.matches ? '12' : '6'">
                 <div class="text">
                     <div class="header-text">
                     <span v-motion-slide-visible-right style="transition: 1.1s;">
@@ -27,7 +27,7 @@
                 </div>
               
             </v-col>
-            <v-col xl="4" lg="4" md="5" sm="6" cols="12">
+            <v-col :class="x.matches? 'd-block':''" xl="4" lg="4" md="5" :sm="x.matches ? '12' :'6'" cols="12">
                 <div class="img" v-motion-roll-visible-top style="transition: 1.1s;">
                     <svg class="svg" width="116" height="111" viewBox="0 0 116 111" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32.2856 110.494H45.0777C48.3845 72.9664 79.016 45.2775 116 42.1429V29.9529C72.4894 29.9529 32.2856 66.436 32.2856 110.494Z" fill="#0654DC"/>
@@ -45,7 +45,11 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                x:window.matchMedia("(max-width:750px)")
+            }
+        }, 
     }
 </script>
 
@@ -125,43 +129,46 @@ span{
     position: relative;
     align-items: flex-end;
     background: url(assets/img/ahmed2.jpg);
-    width: 110%;
-    height: 130%;
-    position: relative;
-    top: -40px;
-    background-size: 100% 100%;
-background-attachment: scroll;
-background-repeat: no-repeat;
-image-rendering: crisp-edges;
- image-rendering: -moz-crisp-edges;          /* Firefox */
- image-rendering: -o-crisp-edges;            /* Opera */
- image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
- -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
- .svg{
-    display: inline-block;
-    position: absolute;
-    bottom: -50px;
-    
- }
+    width: 100%;
+    height: 100%;
+   background-size: contain;
+   background-attachment: scroll;
+   background-repeat: no-repeat;
+   background-position: center center;
+   image-rendering: crisp-edges;
+   image-rendering: -moz-crisp-edges;          /* Firefox */
+   image-rendering: -o-crisp-edges;            /* Opera */
+   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+   .svg{
+   position: relative;
+   top:50px;
+}
+ 
 }
 }
-@media (max-width:1279px) {
+@media (max-width:1910px) {
     .ahmed{
         .img{
-            margin-top: 35px;
-            margin-left:20px !important ;
-           width: 110% !important;
-           height: 115%;
-           
-           
+        margin-top: 25px;
+        .svg{
+            top: 10;
+        }
+        }
+    }
+    
+}
+@media screen and (max-width:1279px) {
+    .ahmed{
+        .img{     
+     .svg{
+        top: 0;
+     }   
 
         }
     }
 
-    .text{
-       width: 100%;
-       height: 100%;
-    }
+   
 }
 
 @media (max-width:1115px) {
@@ -193,14 +200,20 @@ image-rendering: crisp-edges;
     
 }
 
-@media (max-width:960px) {
+@media screen and (max-width:961px) {
     .ahmed{
         .img{
-            margin-top: 35px;
+           // background-color: red;
+            background-position: center bottom;
+           bottom: 90px;
             margin-left:40px !important;
             padding-right: 50px;
            width: 90% !important;
            height: 90%;
+           .svg{
+    top: 30px;   
+       width: 100px;
+   }
         }
     }
 
@@ -209,62 +222,67 @@ image-rendering: crisp-edges;
        width: 110%;
        height: 100%;
     margin-bottom: 85px;
+    }
+   
+    
+}
+@media (max-width:960px) {
+    .ahmed{
+        .img{
+            bottom: 30px ;
+            width: 90%;
+           height: 90%; 
+        }
+    }
+    
+}
+@media (max-width:949px) {
+    .ahmed{
+        .img{
+            bottom: 50px;
+        }
+    }
+    
+}
+@media (max-width:910px) {
+
+     .ahmed{
+        .img{
+            bottom: 60px;
+        }
+     }
+
+
+    
+}
+@media (max-width:870px) {
+    .ahmed{
+        .img{
+            bottom: 100px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:836px) {
+    .ahmed{
+        .img{
+           bottom: 90px;
+        
+        }
     }
     
 }
 
 @media (max-width:800px) {
     .ahmed{
-        height: fit-content !important;
-        padding-bottom: 50px;
         .img{
-            margin-top: 75px;
-            margin-left:50px ;
-            padding-right: 50px;
-           width: 80%;
-           height: 80%;
-                
-       
+            bottom: 100px;
         }
     }
-
-    .text{
-        margin-right: 600px;
-       width: 110%;
-       height: 100%;
-    margin-bottom: 85px;
-    }
-
+    
 }
 @media (max-width:750px) {
-    .ahmed{
-        .img{
-
-            width:43vw;
-            right: 1vw;
-        }
-    }
-    
-}
-@media (max-width:700px) {
-    .ahmed{
-        .img{
-            height: 65vh;
-        }
-    }
-    
-}
-@media (max-width:620px) {
-    .ahmed{
-        .img{
-            right: 15px;
-            top: 0px;
-            height: 60vh;
-        }
-    }
-    
-}
-@media (max-width:599px) {
     .ahmed{
         height: fit-content;
         justify-content: center;
@@ -272,79 +290,79 @@ image-rendering: crisp-edges;
        max-width: 90vw;
     }
         .img{
-            width: 80% !important;
-            background-size: 100% 100%;
-            background-position: center;
-            height: 70vh;
-            left: 3vw;
-            top: -10vh;    
-        }
-    }
-}
-@media (max-width:500px) {
-    .ahmed{
-        .img{
-            width: 80%;
-            right: 1vw;
-        }
-    }
-    
-}
-@media (max-width: 451px) {
-    .ahmed{
-        .img{
-            width: 100%;
-            height: 60vh !important;
-            left: 1vw !important;
-            background-size: 100% 100%;
+            top: -50px;
+            max-width: 90vw !important;
+            height: 60vh;
+          //  background-color: red;
+            background-size: contain;
+            background-position: center bottom;
+           
+            .svg{
 
+                top: 50px !important;
+            }
+        }
+    }
+}
+
+@media (max-width:540px) {
+    .ahmed{
+        .img{
+            max-width: 75vw !important;
+            
         }
     }
     
 }
-@media (max-width:420px) {
+@media (max-width:450px) {
     .ahmed{
         .img{
-            right: 12vw;
+        top: -140px !important;
+            .svg{
+                max-width: 80px;
+            }
         }
     }
     
 }
 @media (max-width:400px) {
     .ahmed{
+        .text{
+            .body-text , .footer-text{
+                font-size: 14px;
+            }
+        }
         .img{
-            height: 62vh;
-            right: 13vw;
+            top: -200px !important;
+            max-width:70vw !important ;
+            .svg{
+                max-width: 70px;
+            }
         }
     }
     
 }
-@media (max-width: 360px) {
+
+
+@media (max-width:350px) {
     .ahmed{
+        .text{
+            .header-text{
+                font-size: 13px;
+            }
+            .body-text , .footer-text{
+                font-size: 12px;
+            }
+        }
         .img{
-           height: 55vh !important;
-            left: -1vw !important;
+            top: -250px !important;
+            max-width:67vw !important ;
+            .svg{
+                max-width: 50px;
+            }
         }
     }
     
 }
-@media (max-width: 330px) {
-    .ahmed{
-        .img{
-            width: 90% !important;
-        height: 50vh !important;
-            left: -7vw !important;
-        }
-    }
-    
-}
-@media (max-width: 301px) {
-    .ahmed{
-        .img{
-        
-            right: 16vw;
-        }
-    }
-    
-}
+
 </style>

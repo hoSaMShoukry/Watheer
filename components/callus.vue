@@ -33,7 +33,7 @@
 </div>
 </v-col>
 <!--  col2   -->
-<v-col xl="4" lg="4" md="4" :sm="y.matches ? '12' : '6'" :class="y.matches ? 'd-flex justify-center mr-1 mb-11 mt-10' : ''" v-motion-slide-visible-bottom style="transition: 1.1s;">
+<v-col xl="3" lg="3" md="4" :sm="y.matches ? '12' : '5'" :class="y.matches ? 'd-flex justify-center mr-1 mb-11 mt-10' : ''" v-motion-slide-visible-bottom style="transition: 1.1s;">
     <div class="all-nav d-flex justify-between">
 <div class="nav-1" :class="y.matches ? 'mr-16' : ''">
     <div class="d-flex justify-end align-center mt-1">
@@ -133,7 +133,7 @@ v-motion-slide-visible-top style="transition: 1.1s;"
     export default {
         data(){
             return{
-                x:window.matchMedia("(max-width:960px)"),
+                x:window.matchMedia("(max-width:961px)"),
                 y:window.matchMedia("(max-width:750px)"),
                 z:window.matchMedia("(max-width:665px)"),
             }

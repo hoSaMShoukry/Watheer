@@ -82,7 +82,8 @@ body{
             .debendent-text-svg{
                 position: absolute;
                 bottom:9px;
-                opacity: 0.8;
+                
+                z-index: -1;
             }
         }
     }

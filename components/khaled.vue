@@ -3,7 +3,7 @@
                <v-container>
         <v-row justify="between">
             
-            <v-col xl="4" lg="4" md="5" sm="6" cols="12">
+            <v-col xl="4" lg="4" md="5" :sm="x.matches ? '12' :'6'" :cols="x.matches ? '12' : '6'">
                 <div class="img" v-motion-roll-visible-left style="transition: 1.1s;">
                     <svg class="svg" width="116" height="111" viewBox="0 0 116 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M83.7145 110.494H70.9224C67.6156 72.9664 36.9841 45.2775 6.10352e-05 42.1429V29.9529C43.5107 29.9529 83.7145 66.436 83.7145 110.494Z" fill="#0654DC"/>
@@ -14,7 +14,7 @@
 
                 </div>
             </v-col>
-            <v-col xl="6" lg="6" md="6" sm="6" cols="12">
+            <v-col xl="6" lg="6" md="6" :sm="x.matches ? '12' :'6'" :cols="x.matches ? '12' : '6'">
                 <div class="text">
                     <div class="header-text">
                     <span v-motion-roll-visible-bottom style="transition: 1.1s;">
@@ -45,7 +45,11 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                x:window.matchMedia("(max-width:750px)")
+            }
+        }, 
     }
 </script>
 
@@ -69,10 +73,11 @@ body {
 }
 
 .ahmed{
+
     display: flex;
-   // align-items: center;
+    align-items: center;
     max-width: 100% !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     height:100vh ;
     .header-text , .body-text , .footer-text{
     @include fonts();
@@ -82,6 +87,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
     span{
         direction: rtl;
         font-weight: 500;
@@ -122,41 +128,48 @@ span{
     position: relative;
     align-items: flex-end;
     background: url(assets/img/khaled2.jpg);
-    width: 110%;
-    height: 130%;
-    position: relative;
-    top: -40px;
-    background-size: 100% 100%;
-background-attachment: scroll;
-background-repeat: no-repeat;
-image-rendering: crisp-edges;
- image-rendering: -moz-crisp-edges;          /* Firefox */
- image-rendering: -o-crisp-edges;            /* Opera */
- image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
- -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
- .svg{
-    display: inline-block;
-    position: absolute;
-    bottom: -50px;
-    
- }
+    width: 100%;
+    height: 100%;
+   background-size: contain;
+   background-attachment: scroll;
+   background-repeat: no-repeat;
+   background-position: center bottom;
+   image-rendering: crisp-edges;
+   image-rendering: -moz-crisp-edges;          /* Firefox */
+   image-rendering: -o-crisp-edges;            /* Opera */
+   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+   -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+   position: relative;
+   .svg{
+   position: absolute;
+   bottom:-30px;
+}
+ 
 }
 }
+
+
 @media (max-width:1279px) {
     .ahmed{
+        padding-bottom: 200px;
         .img{
-            margin-top: 35px;
-            margin-left:60px;
-           width: 110%;
-           height: 100%;
-           
+           bottom: 60px;
+           margin-left:-20px !important ;
+           width: 120%;
+           height: 115%;
+    .svg{
+        position: absolute;
+        bottom: -50px !important;
+    }
 
         }
     }
 
     .text{
-       width: 100%;
+        margin-right: 600px;
+       width: 110%;
        height: 100%;
+       margin-top: 40px;
     }
 }
 
@@ -173,25 +186,7 @@ image-rendering: crisp-edges;
    
 }
 
-@media (max-width:1279px) {
-    .ahmed{
-        .img{
-            margin-top: 35px;
-            margin-left:-20px !important ;
-           width: 120%;
-           height: 115%;
-           
 
-        }
-    }
-
-    .text{
-        margin-right: 600px;
-       width: 110%;
-       height: 100%;
-       margin-top: 40px;
-    }
-}
 @media (max-width:1000px) {
     .ahmed{
         .text{
@@ -200,7 +195,7 @@ image-rendering: crisp-edges;
     }
     
 }
-@media (max-width:960px) {
+@media screen and (max-width:961px) {
     .ahmed{
         height: fit-content !important;
         overflow-y: hidden;
@@ -208,12 +203,16 @@ image-rendering: crisp-edges;
             width: 90%;
         }
         .img{
-            margin-top: 75px;
+            bottom: 130px;
             margin-left:20px !important;
-           width: 90%;
-           height: 80%;
-                
+            background-size: contain;
+           width: 100%;
+           height: 100%; 
        
+        }
+        .svg{
+           
+            width: 100px;
         }
     }
 
@@ -225,10 +224,28 @@ image-rendering: crisp-edges;
     }
     
 }
+@media (max-width:960px) {
+    .ahmed{
+        .img{
+            bottom: 60px;
+            width: 90% !important;
+            height: 90% !important;
+        }
+    }
+    
+}
+@media (max-width:851px) {
+    .ahmed{
+.img{
+    bottom: 100px;
+}
+    }
+    
+}
 @media (max-width:801px) {
     .ahmed{
         .img{
-            margin-top: 75px;
+           
             margin-left:50px ;
             padding-right: 50px;
            width: 95% !important;
@@ -246,119 +263,104 @@ image-rendering: crisp-edges;
     }
 
 }
-
-@media (max-width:730px) {
+@media (max-width:785px) {
     .ahmed{
         .img{
-            margin: 100px;
-            width: 100% !important;
-            height: 70% !important;
-            right: 15px;
+            bottom: 120px;
         }
     }
     
 }
 
-
-@media (max-width: 660px) {
+@media (max-width:750px) {
     .ahmed{
-        height: fit-content;
-        .img{
-            height: 60% !important;
-            margin-top: 150px;
-        }
-    }
-    
-}
-@media (max-width:599px) {
-    .ahmed{
-        height: fit-content;
+        margin-top: 100px;
+       // height: fit-content;
         justify-content: center;
         .text{
-       width: 90vw !important;
+       max-width: 90vw;
+       margin-top: 10px;
     }
         .img{
-            width: 80% !important;
-            background-size: 100% 100%;
-            background-position: center;
-            height: 70vh !important;
-            left: 3.5vw;
-            top: -10vh;    
+            position: static;
+           margin-bottom: 420px;
+           max-width: 90vw !important;
+            height: 60vh;
+           // background-color: red;
+            background-size: contain;
+            background-position: center bottom;
+            margin-left: 40px !important;
+           
+            .svg{
+
+//                top: 50px !important;
+            }
         }
     }
 }
-@media (max-width:500px) {
+
+@media (max-width:540px) {
     .ahmed{
         .img{
-            width: 80% !important;
-             right: 1vw !important;
-        }
-    }
-    
-}
-@media (max-width: 451px) {
-    .ahmed{
-        .img{
-            width: 100%;
-            height: 60vh !important;
-            left: 4vw !important;
-            background-size: 100% 100%;
-        }
-    }
-    
-}
-@media (max-width:420px) {
-    .ahmed{
-        .img{
-            right: 12vw;
+            max-width: 79vw !important;
+            
         }
     }
     
 }
-@media (max-width:400px) {
+@media (max-width:450px) {
     .ahmed{
         .img{
-            right: 13vw;
+            margin-top: -50px !important;
+            .svg{
+                max-width: 80px;
+            }
         }
     }
     
 }
-@media (max-width:361px) {
+@media (max-width:401px) {
     .ahmed{
-        .img{
-            width: 80vw !important;
-            height: 50vh !important;
-        left:1vw !important;
-        }
-    }
-    
-}
-@media (max-width: 351px) {
-    .ahmed{
-        .img{
-            height: 50vh !important;
-            right: 15vw;
-        }
-    }
-    
-}
-@media (max-width: 320px) {
-    .ahmed{
-        .img{
+        margin-top: -100px;
         
-            right: 16vw;
+        .text{
+            .body-text , .footer-text{
+                font-size: 14px;
+            }
         }
-    }
-    
-}
-@media (max-width: 301px) {
-    .ahmed{
         .img{
-            width: 82vw !important;
-            height: 48vh !important;
-            left: 1vw !important;
+           
+           
+            max-width:73vw !important ;
+            .svg{
+                max-width: 70px;
+            }
         }
     }
     
 }
+
+
+@media (max-width:350px) {
+    .ahmed{
+        margin-top: -170px;
+        .text{
+            .header-text{
+                font-size: 13px;
+            }
+            .body-text , .footer-text{
+                font-size: 12px;
+            }
+        }
+        .img{
+           
+            max-width:72vw !important ;
+            .svg{
+                max-width: 50px;
+            }
+        }
+    }
+    
+}
+
 </style>

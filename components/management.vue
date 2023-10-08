@@ -20,7 +20,7 @@
                 <!--first col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
                    <v-card class="card" v-motion-slide-visible-left style="transition: 1.1s;">
-                    <img src="~/assets/img/salem.jpg" alt="">
+                    <img src="~/assets/img/salem.jpg" alt="" :style="{objectFit:x.matches ? 'cover' : 'cover'}">
                    </v-card>
                    <div class="card-info">
                     <span>سالم الدوسرى</span>
@@ -42,7 +42,7 @@
                 <!--second col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
                     <v-card class="card" v-motion-slide-visible-right style="transition: 1.1s;">
-                    <img src="~/assets/img/khaled.jpg" alt="">
+                    <img src="~/assets/img/khaled.jpg" alt="" :style="{objectFit:x.matches ? 'cover' : 'cover'}">
                    </v-card>
                    <div class="card-info">
                     <span>خالد القحطانى</span>
@@ -63,8 +63,8 @@
                 </v-col>
                 <!--third col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
-                    <v-card class="card" v-motion-slide-visible-bottom style="transition: 1.1s;">
-                    <img src="~/assets/img/saeed.jpg" alt="">
+                    <v-card variant="text" class="card" v-motion-slide-visible-bottom style="transition: 1.1s;">
+                    <img src="~/assets/img/saeed.jpg" alt="" :style="{objectFit:x.matches ? 'cover' : 'cover'}">
                    </v-card>
                    <div class="card-info">
                     <span>سعيد الشمرى</span>
@@ -86,7 +86,7 @@
                 <!--fourth col-->
                 <v-col xl="3" lg="3" md="4" sm="4" :cols="x.matches ? '12' : '6'">
                     <v-card class="card" v-motion-slide-visible-top style="transition: 1.1s;">
-                    <img src="~/assets/img/ahmed.jpg" alt="">
+                    <img src="~/assets/img/ahmed.jpg" alt="" :style="{objectFit:x.matches ? 'cover' : 'cover'}">
                    </v-card>
                    <div class="card-info">
                     <span>أحمد الدوسرى</span>

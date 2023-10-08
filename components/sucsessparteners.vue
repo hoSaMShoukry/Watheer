@@ -107,6 +107,7 @@ font-weight: 500;
     position: relative;
     top: -15px;
     opacity: 0.7;
+    z-index: -1;
 }
 }
 .success-partenrs-body{
